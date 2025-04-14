@@ -3,7 +3,7 @@ const db = require('../db');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    db.query('SELECT * FROM drugs ORDER BY name ASC', (err, results) => {
+    db.query('SELECT * FROM illicit_drugs ORDER BY name ASC', (err, results) => {
       if (err) return res.status(500).json({ error: err });
       res.json(results);
     });
