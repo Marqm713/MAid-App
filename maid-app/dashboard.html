@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MAid Dashboard</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f8f9fc;
+    }
+    .sidebar {
+      height: 100vh;
+    }
+    .dashboard-card {
+      transition: 0.2s;
+    }
+    .dashboard-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="d-flex">
+    <!-- Sidebar -->
+    <div class="bg-primary text-white p-3 sidebar" style="width: 250px;">
+    <img src="assets/images/maid-logo.png" alt="MAid Logo" style="width: 150px;">
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2">
+          <a class="nav-link text-white" href="dashboard.html"><i class="fas fa-home me-2"></i>Dashboard</a>
+        </li>
+        <li class="nav-item mb-2">
+          <a class="nav-link text-white" href="medications.html"><i class="fas fa-pills me-2"></i>Medications</a>
+        </li>
+        <li class="nav-item mb-2">
+          <a class="nav-link text-white" href="drugs.html"><i class="fas fa-capsules me-2"></i>Illicit Drugs</a>
+        </li>
+        <li class="nav-item mb-2">
+          <a class="nav-link text-white" href="bmi.html"><i class="fas fa-weight me-2"></i>BMI Calculator</a>
+        </li>
+        <li class="nav-item mt-4">
+          <a class="nav-link text-white" href="index.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-grow-1 p-4">
+      <h2 class="mb-4">The Medical Assistant Identifier App - Dashboard</h2>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card dashboard-card h-100 text-center">
+            <div class="card-body">
+              <i class="fas fa-pills fa-3x text-primary mb-3"></i>
+              <h5 class="card-title">Medication Directory</h5>
+              <p class="card-text">Search and view medications and dosages.</p>
+              <a href="medications.html" class="btn btn-outline-primary w-100">View Medications</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card dashboard-card h-100 text-center">
+            <div class="card-body">
+              <i class="fas fa-capsules fa-3x text-danger mb-3"></i>
+              <h5 class="card-title">Illicit Drug Info</h5>
+              <p class="card-text">Browse a categorized list of illicit drugs.</p>
+              <a href="drugs.html" class="btn btn-outline-danger w-100">View Illicit Drugs</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card dashboard-card h-100 text-center">
+            <div class="card-body">
+              <i class="fas fa-weight fa-3x text-success mb-3"></i>
+              <h5 class="card-title">BMI Calculator</h5>
+              <p class="card-text">Calculate patient BMI using US units.</p>
+              <a href="bmi.html" class="btn btn-outline-success w-100">Open Calculator</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

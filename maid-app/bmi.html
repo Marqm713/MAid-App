@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MAid - BMI Calculator</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f8f9fc;
+    }
+    .sidebar {
+      height: 100vh;
+    }
+    .main-content {
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="d-flex">
+    <!-- Sidebar -->
+    <div class="bg-primary text-white p-3 sidebar" style="width: 250px;">
+      <div class="text-center mb-4">
+        <img src="assets/images/maid-logo.png" alt="MAid Logo" style="width: 150px;" />
+      </div>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a class="nav-link text-white" href="dashboard.html"><i class="fas fa-home me-2"></i>Dashboard</a></li>
+        <li class="nav-item mb-2"><a class="nav-link text-white" href="medications.html"><i class="fas fa-pills me-2"></i>Medications</a></li>
+        <li class="nav-item mb-2"><a class="nav-link text-white" href="drugs.html"><i class="fas fa-capsules me-2"></i>Illicit Drugs</a></li>
+        <li class="nav-item mb-2"><a class="nav-link text-white" href="bmi.html"><i class="fas fa-weight me-2"></i>BMI Calculator</a></li>
+        <li class="nav-item mt-4"><a class="nav-link text-white" href="index.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+      </ul>
+    </div>
+
+
+    <div class="flex-grow-1 main-content">
+      <h2 class="mb-4">The Medical Assistant Identifier App - BMI Calculator</h2>
+      <div class="card p-4 shadow-sm">
+        <h3 class="mb-3">Body Mass Index (US Units)</h3>
+        <form id="bmi-form">
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label for="feet" class="form-label">Height (Feet)</label>
+              <input type="number" id="feet" class="form-control" placeholder="Feet" required />
+            </div>
+            <div class="col-md-6">
+              <label for="inches" class="form-label">Height (Inches)</label>
+              <input type="number" id="inches" class="form-control" placeholder="Inches" required />
+            </div>
+            <div class="col-md-12">
+              <label for="pounds" class="form-label">Weight (lbs)</label>
+              <input type="number" id="pounds" class="form-control" placeholder="Pounds" required />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Calculate BMI</button>
+        </form>
+
+
+        <div class="mt-4">
+          <label for="bmi-output" class="form-label">Result</label>
+          <textarea id="bmi-output" class="form-control" rows="2" readonly placeholder="Your BMI result will appear here..."></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr
