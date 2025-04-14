@@ -71,4 +71,34 @@
   </div>
 
   <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('bmi-form');
+      const output = document.getElementById('bmi-output');
+  
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+  
+        const feet = parseFloat(document.getElementById('feet').value);
+        const inches = parseFloat(document.getElementById('inches').value);
+        const pounds = parseFloat(document.getElementById('pounds').value);
+  
+        if (isNaN(feet) || isNaN(inches) || isNaN(pounds)) {
+          output.value = '❌ Please enter valid numbers for height and weight.';
+          return;
+        }
+  
+        const totalInches = (feet * 12) + inches;
+        const bmi = ((pounds / (totalInches ** 2)) * 703).toFixed(1);
+  
+        let category = '';
+        if (bmi < 18.5) category = 'Underweight';
+        else if (bmi < 24.9) category = 'Normal weight';
+        else if (bmi < 29.9) category = 'Overweight';
+        else category = 'Obese';
+  
+        output.value = `Your BMI is ${bmi} (${category})`;
+      });
+    });
+  </script>
+</html>
