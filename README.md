@@ -2,7 +2,7 @@
 
 A full-stack medical reference tool built for nurses, healthcare providers, and students. The MAid App helps users quickly look up **medications**, **illicit drugs**, and perform **BMI calculations** — all within a responsive and exportable web interface.
 
-![MAid Logo](assets/images/maid-logo.png)
+![MAid Logo](maid-app/assets/images/maid-logo.png)
 
 ---
 
